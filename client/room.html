@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aoom - Room</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="title">AOOM Video Conference</h1>
+
+  <div id="videoContainer" class="video-section">
+    <video id="localVideo" autoplay muted playsinline class="video-box"></video>
+    <video id="remoteVideo" autoplay playsinline class="video-box" style="display: none;"></video>
+  </div>
+
+  <div id="callControls" class="controls">
+    <button id="toggleVideo">Turn Video Off</button>
+    <button id="toggleAudio">Mute</button>
+    <button id="shareScreen">Share Screen</button>
+    <button id="leaveRoom" class="leave-btn">Leave Room</button>
+  </div>
+
+  <div id="chatContainer" class="chat-box">
+    <div id="messages" class="messages"></div>
+    <input type="text" id="messageInput" placeholder="Type your message..." />
+    <button id="sendMessage">Send</button>
+
+    <input type="file" id="fileInput" />
+    <button id="sendFile">Send File</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
